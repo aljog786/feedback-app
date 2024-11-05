@@ -1,4 +1,5 @@
-import Card from "../components/shared/Card"
+import Card from "../components/shared/Card";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
@@ -7,7 +8,7 @@ const AboutUs = () => {
             <h1>About this project</h1>
             <p>This is a feedback app</p>
             <p>version : 1.0</p>
-            <p><a href="/">back to home</a></p>
+            <p><Link to='/aboutus'>back to home</Link></p>
         </div>
     </Card>
   )
