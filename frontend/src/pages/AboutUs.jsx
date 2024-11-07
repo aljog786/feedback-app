@@ -8,7 +8,7 @@ const AboutUs = () => {
             <h1>About this project</h1>
             <p>This is a feedback app</p>
             <p>version : 1.0</p>
-            <p><Link to='/aboutus'>back to home</Link></p>
+            <p><Link to='/'>back to home</Link></p>
         </div>
     </Card>
   )
