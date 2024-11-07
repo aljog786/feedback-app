@@ -1,5 +1,3 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from "./components/Header";
 import FeedbackList from "./components/FeedbackList";
@@ -10,10 +8,6 @@ import AboutUs from './pages/AboutUs';
 import { FeedbackProvider } from './context/FeedbackContext';
 
 function App() {
-
-
-  
-
 
   return (
     <FeedbackProvider>

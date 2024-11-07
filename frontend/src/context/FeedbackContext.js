@@ -6,6 +6,7 @@ const FeedbackContext = createContext();
 export const FeedbackProvider = ({children}) => {
 
     const [feedback, setFeedback] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     const [ feedbackEdit,setFeedbackEdit ] = useState({
         item: {},
@@ -17,6 +18,7 @@ export const FeedbackProvider = ({children}) => {
         try {
           const response = await axios.get('http://localhost:5000/feedback');
           setFeedback(response.data);
+          setIsLoading(false);
         } catch (error) {
           console.error('Error fetching feedback', error);
         }
@@ -65,6 +67,7 @@ export const FeedbackProvider = ({children}) => {
         <FeedbackContext.Provider value={{
             feedback,
             feedbackEdit,
+            isLoading,
             deleteFeedback,
             addFeedback,
             editFeedback,
