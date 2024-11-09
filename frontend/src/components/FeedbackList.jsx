@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { motion,AnimatePresence } from 'framer-motion';
 import FeedbackItem from "./FeedbackItem";
 import FeedbackContext from '../context/FeedbackContext';
-import Loader from './shared/Loader';
+import ReactLoading from 'react-loading';
 
 const FeedbackList = () => {
 
@@ -15,8 +15,8 @@ const FeedbackList = () => {
     }
 
     return isLoading ? (
-        <div>
-        <Loader/>
+        <div className="loading-container">
+            <ReactLoading type="spinningBubbles" color="rgb(158, 197, 254)" />
         </div>
     ) : (
         <div className="feedback-list">
